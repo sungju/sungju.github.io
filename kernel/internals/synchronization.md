@@ -158,8 +158,7 @@ void sema_init(struct semaphore *sem, int val);
 ```
 
 - Example
-
-- First module which owns semaphore
+  - First module which owns semaphore
 
 ```
 /* sema_mod1.c */
