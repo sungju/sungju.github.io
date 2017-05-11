@@ -384,11 +384,9 @@ SYSCALL_DEFINE2(sethostname, char __user *, name, int, len)
 ```
 
 
-#### read/write semaphore case : Case 01695337 ####
+#### read/write semaphore case ####
 
 ```
-$ retrace-server-interact 757080661 crash
-
 crash> ps -m | grep UN | tail
 [  0 06:03:45.391] [UN]  PID: 14236  TASK: ffff8801384d5500  CPU: 2   COMMAND: "java"
 [  0 06:03:45.391] [UN]  PID: 14231  TASK: ffff88013a454040  CPU: 0   COMMAND: "java"
