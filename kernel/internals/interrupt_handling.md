@@ -942,7 +942,7 @@ char *softirq_to_name[NR_SOFTIRQS] = {
 ```markdown
 crash> softirq_vec
 softirq_vec = $1 = 
- {{
+ \{{
     action = 0xffffffff810802b0 <tasklet_hi_action>
   }, {
     action = 0xffffffff8108a310 <run_timer_softirq>
@@ -962,7 +962,7 @@ softirq_vec = $1 =
     action = 0xffffffff810a6290 <run_hrtimer_softirq>
   }, {
     action = 0xffffffff810f36b0 <rcu_process_callbacks>
-  }}
+  \}}
 
 ```
 
