@@ -939,7 +939,7 @@ char *softirq_to_name[NR_SOFTIRQS] = {
 - You can find registered actions in vmcore
 
 
-```
+```markdown
 crash> softirq_vec
 softirq_vec = $1 = 
  {{
@@ -963,6 +963,7 @@ softirq_vec = $1 =
   }, {
     action = 0xffffffff810f36b0 <rcu_process_callbacks>
   }}
+
 ```
 
 - Registering a new softirq is not recommended as it's required to modify vector. If you want to run an action, it's better to register a function as a tasklet or tasklet_hi.
