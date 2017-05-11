@@ -19,4 +19,6 @@
 - kprobes, jprobes and SystemTap
 - vmcore analysis
 
+[Related source code](https://github.com/sungju/kernel_examples)
+
 [Back to main page](https://sungju.github.io/)
