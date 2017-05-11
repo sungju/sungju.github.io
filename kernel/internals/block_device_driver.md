@@ -2,14 +2,14 @@
 
 ### What's block device driver ? ###
 
-![Charcter device driver vs block device driver](https://sungju.github.io/kernel/device_drivers.png)
+![Charcter device driver vs block device driver](https://sungju.github.io/kernel/internals/device_drivers.png)
 
 - In general, filesystems are locating on top of the block device such as hard disk, CD-ROM, USB memory stick, RAM disk, etc.
 - Block device driver needs to handle request queue which is handling block data for read/write
 - Each block device has 'gendisk' to represent the device stats
 	- Block device has concept of partitioning
 
-![Block device driver](https://sungju.github.io/kernel/block_device_driver.jpg)
+![Block device driver](https://sungju.github.io/kernel/internals/block_device_driver.jpg)
 
 - structure 'gendisk'
 
@@ -225,7 +225,7 @@ Enomem:
 
 - 'request' is a unit to request read/write into the block device
 
-![request_queue](https://sungju.github.io/kernel/request_queue.png)
+![request_queue](https://sungju.github.io/kernel/internals/request_queue.png)
 
 ```
 struct request_queue {
@@ -629,7 +629,7 @@ $ rmmod sbd
 
 ### I/O scheduler ###
 
-![I/O Scheduling in Linux](https://sungju.github.io/kernel/elevator.png)
+![I/O Scheduling in Linux](https://sungju.github.io/kernel/internals/elevator.png)
 
 * I/O scheduler can be set during the boot or by changing the properties for each block devices.
 * Boot time change can be done with using 'elevator='
