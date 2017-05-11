@@ -935,7 +935,9 @@ char *softirq_to_name[NR_SOFTIRQS] = {
 };
 ```
 
+
 - You can find registered actions in vmcore
+
 
 ```
 crash> softirq_vec
