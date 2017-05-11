@@ -204,7 +204,7 @@ echo 8 > /proc/sys/kernel/printk
 
 - Identifies which device driver needs to be called to operate application requests
 
-![major number and related device drivers](https://sungju.github.io/dev_t.gif)
+![major number and related device drivers](https://sungju.github.io/kernel/internals/dev_t.gif)
 
 - Each file under /dev has major and minor number to identify which device driver with which function it needs to be called
 

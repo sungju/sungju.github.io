@@ -292,7 +292,7 @@ static inline struct page *alloc_pages(gfp_t gfp_mask, unsigned int order);
 
 - How the memory is allocated? Using 'buddy' algorithm which caused of name '/proc/buddyinfo'
 
-![Buddy Algorithm](https://sungju.github.io/buddy_allocate.png)
+![Buddy Algorithm](https://sungju.github.io/kernel/internals/buddy_allocate.png)
 
 
 ```

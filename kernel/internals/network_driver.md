@@ -1,6 +1,6 @@
 # Network Device Driver #
 
-###Network layer ###
+### Network layer ###
 
 - In the below network layers, network device driver stays at the bottom just before the actual network card
 - This can be different in behaving based on the type of network card such as Ethernet, Fiber, etc
