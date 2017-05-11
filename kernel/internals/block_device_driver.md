@@ -1458,18 +1458,22 @@ out:
 
 crash> deadline_data 0xffff88042e226d00
 struct deadline_data {
-  sort_list = {{
+  sort_list = {
+    {
       rb_node = 0x0
     }, {
       rb_node = 0x0
-    }}, 
-  fifo_list = {{
+    }
+  }, 
+  fifo_list = {
+    {
       next = 0xffff88042e226d10, 
       prev = 0xffff88042e226d10
     }, {
       next = 0xffff88042e226d20, 
       prev = 0xffff88042e226d20
-    }}, 
+    }
+  }, 
   next_rq = {0x0, 0x0}, 
   batching = 0x1, 
   last_sector = 0x809c4, 
