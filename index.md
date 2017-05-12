@@ -21,3 +21,4 @@ This section contains font related knowledges and related links.
   - A python library with objects that deal with data usually associated with fonts and type design
 - [Convert TTF to UFO online](https://convertio.co/ttf-ufo/)
 - [The FreeType Project](https://www.freetype.org/)
+  - FreeType is a freely available software library to render fonts.
