@@ -882,7 +882,7 @@ void spin_lock(spinlock_t *lock);
 /* Release the lock */
 void spin_unlock(spinlock_t *lock);
 
-/* Take a lock and return 0. Otherwise, it'll return immediately with value bigger than 0 */ 
+/* Take a lock and return 1. Otherwise, it'll return 0 */
 int spin_trylock(spinlock_t *lock);
 
 /* Check whether the lock is already taken. 
