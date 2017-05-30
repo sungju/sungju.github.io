@@ -155,3 +155,8 @@ May 30 16:25:03 devel kernel: kthreadd(2) is Not Runnable
 May 30 16:25:03 devel kernel: ksoftirqd/0(3) is Not Runnable
 May 30 16:25:03 devel kernel: migration/0(7) is Not Runnable
 ```
+
+
+
+---
+[Back to topic list](https://sungju.github.io/kernel/internals/index)
