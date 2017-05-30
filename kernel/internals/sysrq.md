@@ -5,8 +5,8 @@
 * You can trigger SysRq functionalities with one of the below two methods.
 	* Method 1:
 		* echo 1 > /proc/sys/kernel/sysrq
-		* In console: SysRq + Alt + [key]
-		* In GUI: SysRq + Ctrl + Alt + [key]
+		* In console: Alt + SysRq + [key]
+		* In GUI: Alt + Ctrl + SysRq + [key]
 	* Method 2:
 		* echo [key] > /proc/sysrq-trigger
 * You can find out the list of functionalities by issued 'h' (help)
