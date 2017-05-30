@@ -15,7 +15,7 @@
 - [PCI](https://sungju.github.io/kernel/internals/pci)
 - [Network device driver](https://sungju.github.io/kernel/internals/network_driver)
 - [Block device driver](https://sungju.github.io/kernel/internals/block_device_driver)
-- SysRq
+- [SysRq](https://sungju.github.io/kernel/internals/sysrq)
 - kprobes, jprobes and SystemTap
 - vmcore analysis
 
