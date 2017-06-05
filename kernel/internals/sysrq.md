@@ -154,9 +154,19 @@ May 30 16:25:03 devel kernel: systemd(1) is Not Runnable
 May 30 16:25:03 devel kernel: kthreadd(2) is Not Runnable
 May 30 16:25:03 devel kernel: ksoftirqd/0(3) is Not Runnable
 May 30 16:25:03 devel kernel: migration/0(7) is Not Runnable
+
+crash> p sysrq_key_table[10]
+$2 = (struct sysrq_key_op *) 0xffffffffa0779000
+crash> sym 0xffffffffa0779000
+ffffffffa0779000 (d) my_sysrq_op [sysrq_task]
+crash> sysrq_key_op ffffffffa0779000
+struct sysrq_key_op {
+  handler = 0xffffffffa0777000, 
+  help_msg = 0xffffffffa0778062 "dump-All-tasks", 
+  action_msg = 0xffffffffa0778071 "Show All Task List", 
+  enable_mask = 0
+}
 ```
-
-
 
 ---
 [Back to topic list](https://sungju.github.io/kernel/internals/index)
