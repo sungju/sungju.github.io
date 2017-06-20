@@ -858,6 +858,63 @@ $ cat /sys/kernel/debug/tracing/trace | head -n 10
    1)   0.455 us    |            }
 ```
 
+##### Tracing stack #####
+
+- Examine the size of the kernel stack and how much stack space each function is using
+- Enabling the stack tracer (CONFIG_STACK_TRACER) will show where the biggest use of the stack takes place.
+
+```
+$ grep CONFIG_STACK_TRACER /boot/config-3.10.0-514.el7.x86_64
+CONFIG_STACK_TRACER=y
+```
+
+- Stack trace can be enabled by put '1' on /proc/sys/kernel/stack_tracer_enabled
+- The biggest stack usage so far can be checked with /sys/kernel/debug/tracing/stack_max_size
+- /sys/kernel/debug/tracing/stack_trace shows the biggest stack usage trace
+	- It also shows the size each function was using
+
+```
+$ echo 1 > /proc/sys/kernel/stack_tracer_enabled
+$ cat /sys/kernel/debug/tracing/stack_max_size
+3608
+$ cat /sys/kernel/debug/tracing/stack_trace
+        Depth    Size   Location    (34 entries)
+        -----    ----   --------
+  0)     3608      32   down_trylock+0x14/0x40
+  1)     3576      48   xfs_buf_trylock+0x1f/0x80 [xfs]
+  2)     3528      80   _xfs_buf_find+0x15d/0x340 [xfs]
+  3)     3448      64   xfs_buf_get_map+0x2a/0x240 [xfs]
+  4)     3384      72   xfs_buf_read_map+0x30/0x160 [xfs]
+  5)     3312      64   xfs_trans_read_buf_map+0x211/0x400 [xfs]
+  6)     3248      96   xfs_btree_read_buf_block.constprop.28+0x78/0xc0 [xfs]
+  7)     3152      80   xfs_btree_lookup_get_block+0x80/0x100 [xfs]
+  8)     3072     112   xfs_btree_lookup+0xcf/0x5c0 [xfs]
+  9)     2960      16   xfs_alloc_lookup_eq+0x1b/0x20 [xfs]
+ 10)     2944      88   xfs_alloc_fixup_trees+0x252/0x370 [xfs]
+ 11)     2856     160   xfs_alloc_ag_vextent_near+0x570/0xab0 [xfs]
+ 12)     2696      24   xfs_alloc_ag_vextent+0x10d/0x150 [xfs]
+ 13)     2672      80   xfs_alloc_vextent+0x446/0x5f0 [xfs]
+ 14)     2592     232   xfs_bmap_btalloc+0x3f3/0x780 [xfs]
+ 15)     2360      16   xfs_bmap_alloc+0xe/0x10 [xfs]
+ 16)     2344     344   xfs_bmapi_write+0x499/0xab0 [xfs]
+ 17)     2000     184   xfs_iomap_write_allocate+0x177/0x390 [xfs]
+ 18)     1816      88   xfs_map_blocks+0x186/0x240 [xfs]
+ 19)     1728     184   xfs_vm_writepage+0x193/0x5d0 [xfs]
+ 20)     1544      24   __writepage+0x13/0x50
+ 21)     1520     280   write_cache_pages+0x251/0x4d0
+ 22)     1240      96   generic_writepages+0x4d/0x80
+ 23)     1144      48   xfs_vm_writepages+0x53/0x90 [xfs]
+ 24)     1096      16   do_writepages+0x1e/0x40
+ 25)     1080      64   __writeback_single_inode+0x40/0x210
+ 26)     1016     168   writeback_sb_inodes+0x25e/0x420
+ 27)      848      72   __writeback_inodes_wb+0x9f/0xd0
+ 28)      776     120   wb_writeback+0x263/0x2f0
+ 29)      656     176   bdi_writeback_workfn+0x2cb/0x460
+ 30)      480      72   process_one_work+0x17b/0x470
+ 31)      408      96   worker_thread+0x126/0x410
+ 32)      312     136   kthread+0xcf/0xe0
+ 33)      176     176   ret_from_fork+0x58/0x90
+```
 
 ---
-[Back to topic list](http://file.bne.redhat.com/~dkwon/sbr_kernel_training)
+[Back to topic list](https://sungju.github.io/kernel/internals/index)
