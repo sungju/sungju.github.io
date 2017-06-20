@@ -16,7 +16,7 @@
 - [Network device driver](https://sungju.github.io/kernel/internals/network_driver)
 - [Block device driver](https://sungju.github.io/kernel/internals/block_device_driver)
 - [SysRq](https://sungju.github.io/kernel/internals/sysrq)
-- kprobes, jprobes and SystemTap
+- [kprobes, jprobes and SystemTap](https://sungju.github.io/kernel/internals/debugging)
 - vmcore analysis
 
 [Related source code](https://github.com/sungju/kernel_examples)
