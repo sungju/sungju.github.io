@@ -1,9 +1,9 @@
 # Setup
-title:               Welcome to Sungju's Pages
+title:               Welcome to Sungju Pages
 tagline:             'sungju'
 description:         'Sungju pages'
 url:                 https://sungju.org/
-baseurl:             ''
+baseurl:             'https://sungju.github.io'
 paginate:            5
 permalink:           pretty
 
@@ -18,4 +18,3 @@ plugins:
 
 # Custom vars
 version:             1.1.0
-google_analytics_id: #UA-XXXX-Y
