@@ -10,10 +10,10 @@
 ############################
 
 # Name of website
-title: My Website
+title: Welcome to Sungju's Pages
 
 # Your name to show in the footer
-author: Some Person
+author: Sungju Kwon
 
 ###############################################
 # --- List of links in the navigation bar --- #
@@ -22,9 +22,9 @@ author: Some Person
 navbar-links:
   About Me: "aboutme"
   Resources:
-    - Beautiful Jekyll: "https://beautifuljekyll.com"
+    - Sungju's github: "https://github.com/sungju"
     - Learn markdown: "https://www.markdowntutorial.com/"
-  Author's home: "https://deanattali.com"
+  Author's home: "https://sungju.org"
 
 ################
 # --- Logo --- #
