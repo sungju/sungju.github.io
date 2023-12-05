@@ -1,4 +1,4 @@
-# SysRq #
+# SysRq 
 
 ### Simplest method to debug kernel related information ###
 

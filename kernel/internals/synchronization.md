@@ -1,4 +1,4 @@
-# Synchronization #
+# Synchronization 
 
 ### Linux kernel's synchronization methods ###
 

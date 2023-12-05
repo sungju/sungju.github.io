@@ -1,4 +1,4 @@
-# Learning Kernel internals with code examples #
+# Learning Kernel internals with code examples 
 
 
 ## Topics ##

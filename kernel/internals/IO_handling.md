@@ -1,4 +1,4 @@
-# I/O handling via port #
+# I/O handling via port 
 
 ### Two types of hardware access ###
 
