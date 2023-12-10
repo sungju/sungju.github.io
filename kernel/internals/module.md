@@ -1,4 +1,4 @@
-# Module Programming 
+# Module Programming #
 
 ### Module code layout ###
 
