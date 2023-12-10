@@ -1,41 +1,25 @@
 ---
-layout: table_wrappers
+layout: base
 ---
 
-<!DOCTYPE html>
+<div class="intro-header"></div>
 
-<html lang="{{ site.lang | default: 'en-US' }}">
-{% include head.html %}
-<body>
-  <a class="skip-to-main" href="#main-content">Skip to main content</a>
-  {% include icons/icons.html %}
-  {% include components/sidebar.html %}
-  <div class="main" id="top">
-    {% include components/header.html %}
-    <div class="main-content-wrap">
-      {% include components/breadcrumbs.html %}
-      <div id="main-content" class="main-content">
-        <main>
-          {% if site.heading_anchors != false %}
-            {% include vendor/anchor_headings.html html=content beforeHeading="true" anchorBody="<svg viewBox=\"0 0 16 16\" aria-hidden=\"true\"><use xlink:href=\"#svg-link\"></use></svg>" anchorClass="anchor-heading" anchorAttrs="aria-labelledby=\"%html_id%\"" %}
-          {% else %}
-            {{ content }}
-          {% endif %}
-
-          {% if page.has_children == true and page.has_toc != false %}
-            {% include components/children_nav.html %}
-          {% endif %}
-        </main>
-        {% include components/footer.html %}
-      </div>
+<main class="{% if page.full-width %} container-fluid {% else %} container-md {% endif %}">
+  {% if page.before-content %}
+    <div class="before-content">
+      {% for file in page.before-content %}
+        {% include {{ file }} %}
+      {% endfor %}
     </div>
-    {% if site.search_enabled != false %}
-      {% include components/search_footer.html %}
-    {% endif %}
-  </div>
-
-  {% if site.mermaid %}
-    {% include components/mermaid.html %}
   {% endif %}
-</body>
-</html>
+
+  {{ content }}
+
+  {% if page.after-content %}
+    <div class="after-content">
+      {% for file in page.after-content %}
+        {% include {{ file }} %}
+      {% endfor %}
+    </div>
+  {% endif %}
+</main>
